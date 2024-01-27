@@ -1,37 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Denim-solueation</title>
-    <link rel="stylesheet" href="style.css">
+   <style>
+      .highlight {
+         background-color: rgb(60, 232, 245);
+         font-weight: bold;
+      }
+      .ber{
+        background-color: aqua;
+        padding: 3%;
+        box-shadow:5px 2px red;
+        border-radius: 5px;
+        text-align: center;
+         justify-content: space-around;
+      }
+      .content{
+    background-color: aquamarine;
+    border-radius: 10px;
+    margin: 5%;
+    padding: 7%;
+    color: rgb(128, 128, 45);
+    text-shadow: 1px 0px #fd04c3;
+}
+   </style>
 </head>
- <body>
-    <div class="rakib">
-        <form action="https://rakib9001.github.io/denim/" method="get" class="search-bar">
-            <input type="text" placeholder="search anything..." name="" id="">
-            <button type="submit"><img src="/other/search.png"></button>
-        </form>
-    </div>
-    <div class="box">
-       <p><h1>rakib</h1></p>
-       <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius ab neque labore nihil officia alias aspernatur doloremque voluptatibus debitis libero id, nam, porro, quam voluptates rerum fugit enim quo est.</p>
-       <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio doloremque magnam, mollitia veritatis, facilis ipsa cum adipisci maxime sapiente fuga nam. Officiis ipsa alias debitis inventore iure architecto voluptas itaque?</p>
-    </div>
-    <div class="box1">
-        <h1>anik</h1>
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga ratione id sapiente, porro obcaecati quis inventore enim aspernatur provident quod possimus itaque laudantium expedita error esse. Impedit nobis hic quas!</p>
-         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint maiores et quasi veniam dolor repellat ea itaque? Asperiores facilis repellendus, quidem expedita amet maiores debitis omnis? Quia reprehenderit alias tempore.</p>
-    </div>
-    <div class="box2">
-        <h1>hasib</h1>
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga ratione id sapiente, porro obcaecati quis inventore enim aspernatur provident quod possimus itaque laudantium expedita error esse. Impedit nobis hic quas!</p>
-         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint maiores et quasi veniam dolor repellat ea itaque? Asperiores facilis repellendus, quidem expedita amet maiores debitis omnis? Quia reprehenderit alias tempore.</p>
-    </div>
-    <div class="box3">
-        <h1>sakib</h1>
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga ratione id sapiente, porro obcaecati quis inventore enim aspernatur provident quod possimus itaque laudantium expedita error esse. Impedit nobis hic quas!</p>
-         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint maiores et quasi veniam dolor repellat ea itaque? Asperiores facilis repellendus, quidem expedita amet maiores debitis omnis? Quia reprehenderit alias tempore.</p>
-    </div>
- </body> 
+<body>
+    <form class="ber">
+        <input type="text" id="searchInput" placeholder="Search...">
+        <button type="button" onclick="highlightText()">Search</button>
+     </form>
+   <div class="content">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+      Aliquam cursus maximus eros, non consequat nulla vulputate id. 
+      Sed porttitor quam a felis viverra lacinia. 
+      Vestibulum vestibulum massa at orci ultrices, in maximus tellus aliquam.
+   </div>
+    
+   <script>
+      function highlightText() {
+         const searchInput = document.getElementById('searchInput');
+         const searchValue = searchInput.value.trim();
+         const contentElement = document.querySelector('.content');
+   
+         if (searchValue !== '') {
+         const content = contentElement.innerHTML;
+         const highlightedContent = content.replace(
+            new RegExp(searchValue, 'gi'),
+            '<span class="highlight">$&</span>'
+         );
+         contentElement.innerHTML = highlightedContent;
+         } else {
+            contentElement.innerHTML = contentElement.textContent;
+         }
+      }
+   </script>
+</body>
 </html>
