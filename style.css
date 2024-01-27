@@ -49,3 +49,32 @@ justify-content: center;
     background: #f70101;
     cursor: pointer;
 }
+/* box ===============================
+====================================== */
+.box{
+    background-color: aquamarine;
+    border-radius: 10px;
+    margin: 5%;
+    padding: 7%;
+    color: rgb(128, 128, 45);
+    text-shadow: 1px 0px #fd04c3;
+}
+.box1{
+    background-color: #cac7ff;
+    border-radius: 10px;
+    margin: 5%;
+    padding: 7%;
+}
+.box2{
+    background-color: #7472a9;
+    border-radius: 10px;
+    margin: 5%;
+    padding: 7%;
+}
+.box3{
+    background-color: #4d44f9;
+    border-radius: 10px;
+    margin: 5%;
+    padding: 7%;
+}
+ 
